@@ -8,23 +8,23 @@ structure Configuration where
   position : Int
   tape : Int → Bool
 
-def Configuration.after (c : Configuration) (q : Nat) (b : Bool) (d : Dir) : Configuration where
+@[expose] def Configuration.after (c : Configuration) (q : Nat) (b : Bool) (d : Dir) : Configuration where
   state := q
   position := if d = .right then c.position+1 else c.position-1
   tape := fun i => if i = c.position then b else c.tape i
 
-def Configuration.row (c : Configuration) : Int → VLabel := configRow c.tape c.position c.state
+@[expose] def Configuration.row (c : Configuration) : Int → VLabel := configRow c.tape c.position c.state
 
-def machineStep (M : Machine) (c : Configuration) : Option Configuration :=
+@[expose] def machineStep (M : Machine) (c : Configuration) : Option Configuration :=
   (M c.state (c.tape c.position)).map fun (q,b,d) => c.after q b d
 
-def machineRun (M : Machine) (c : Configuration) : Nat → Option Configuration
+@[expose] def machineRun (M : Machine) (c : Configuration) : Nat → Option Configuration
   | 0 => some c
   | n+1 => (machineRun M c n).bind (machineStep M)
 
 /-- Standard nonhalting: every finite iterate from the initial configuration
     remains defined. Missing transitions are halting. -/
-def NeverHalts (M : Machine) (c : Configuration) : Prop :=
+@[expose] def NeverHalts (M : Machine) (c : Configuration) : Prop :=
   ∀ n, ∃ d, machineRun M c n = some d
 
 theorem after_right_row (c : Configuration) (q : Nat) (b : Bool) :
@@ -86,7 +86,7 @@ theorem row_step_complete {M : Machine} {c d : Configuration}
     exact ⟨edge,hr⟩
 
 /-- Full unbounded space-time diagram with the prescribed initial row. -/
-def SpaceTime (M : Machine) (c : Configuration) : Prop :=
+@[expose] def SpaceTime (M : Machine) (c : Configuration) : Prop :=
   ∃ vertical : Nat → Int → VLabel, ∃ edge : Nat → Int → HLabel,
     vertical 0 = c.row ∧ ∀ n, RowAllowed M (vertical (n+1)) (vertical n) (edge n)
 

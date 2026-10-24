@@ -8,7 +8,7 @@ The original construction and tile list remain in [k230-wang-tiles](https://gith
 
 The proof has three main parts: the base tiles must force computation boards at every scale; each board must run the correct initialised machine computation; and a nonhalting run must yield a genuine whole-plane tiling. Finite example patches alone do not establish any infinite-plane claim.
 
-The verification work includes universal row-simulation and finite-head-displacement proofs, finite-alphabet Wang compactness, exact machine-data checks, and local recognizability certificates under development. Each checked component will be identified separately from the still-open assembly.
+The checked components now include the exact 11,487-tile set cardinality, local and global base recognizability, the exact computation-tile transition binding, universal row simulation, and finite-alphabet compactness. See [what has actually been checked](CHECKED.md) and the source-hash verification receipts. The geometric board assembly is still open.
 
 Glazer's [Rocq development](https://github.com/elliotglazer/k230-rocq) proves the separate equivalence between K230 nonhalting and ZFC consistency. That external theorem is not being introduced as a Lean axiom. A fully Lean-checked consistency interpretation remains a separate obligation.
 

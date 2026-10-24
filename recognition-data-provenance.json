@@ -1,0 +1,32 @@
+{
+  "source_files_sha256": {
+    "base.py": "b93118695946b1ecf84a62744206097aced6486700a474ccb928df627bc64622",
+    "recog.py": "9f5910196e265cc4166ab1977c06f22ce203c0870342a62ae4bd543b7faf95d2",
+    "satlib.py": "6257bfad9c0bb196000d1165e33a1df06a1f42886a4130b129fb4c996aada389",
+    "base_tiles.tsv": "3c9b29efd182262bffb462324237394a64be1edad3b5e684bd3192f946eee666",
+    "base_checks_1110.json": "1f0bdc0cb7bd1578d96afd72507225709ab18701b7fca74b539f7eae163a05f8"
+  },
+  "canonical_mode": [
+    "feat",
+    1,
+    1,
+    1,
+    0
+  ],
+  "source_tile_repr_sha256": "899cc6ac05dc17634eec31ce9549e63abeec38e46c322eabb5cf2fdd718c5586",
+  "exact_table_tsv_equal": true,
+  "raw_dictionary_decode_equal": true,
+  "sigma_source_index_map_equal": true,
+  "tile_count": 156,
+  "aligned_block_count": 185,
+  "excluded_block_count": 29,
+  "kernel_theorems": [
+    "Wang156.D1_six",
+    "Wang156.D2_horizontal_eight",
+    "Wang156.D2_vertical_eight"
+  ],
+  "theorem_axioms": [
+    "propext",
+    "Quot.sound"
+  ]
+}

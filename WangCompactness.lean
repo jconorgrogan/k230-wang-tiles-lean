@@ -38,24 +38,24 @@ structure WangTile (C : Type*) where
 abbrev Cell := Int × Int
 abbrev EdgeSite := Cell × Bool
 
-def edgeNeighbor (s : EdgeSite) : Cell :=
+@[expose] def edgeNeighbor (s : EdgeSite) : Cell :=
   if s.2 then (s.1.1+1,s.1.2) else (s.1.1,s.1.2+1)
 
-def edgeCompatible {C : Type*} {N : Nat} (tiles : Fin N → WangTile C)
+@[expose] def edgeCompatible {C : Type*} {N : Nat} (tiles : Fin N → WangTile C)
     (s : EdgeSite) (a b : Fin N) : Prop :=
   if s.2 then (tiles a).east = (tiles b).west
   else (tiles a).north = (tiles b).south
 
-def edgeRadius (s : EdgeSite) : Nat := max s.1.1.natAbs s.1.2.natAbs
+@[expose] def edgeRadius (s : EdgeSite) : Nat := max s.1.1.natAbs s.1.2.natAbs
 
 /-- Unseeded, boundary-free Wang tiling of every integer cell. -/
-def TilesPlane {C : Type*} {N : Nat} (tiles : Fin N → WangTile C) : Prop :=
+@[expose] def TilesPlane {C : Type*} {N : Nat} (tiles : Fin N → WangTile C) : Prop :=
   ∃ f : Cell → Fin N, ∀ s : EdgeSite,
     edgeCompatible tiles s (f s.1) (f (edgeNeighbor s))
 
 /-- Arbitrarily large finite windows tile. Assignments outside the window
     are arbitrary and unconstrained; the quantified constraints are finite. -/
-def TilesEveryWindow {C : Type*} {N : Nat} (tiles : Fin N → WangTile C) : Prop :=
+@[expose] def TilesEveryWindow {C : Type*} {N : Nat} (tiles : Fin N → WangTile C) : Prop :=
   ∀ n : Nat, ∃ f : Cell → Fin N, ∀ s : EdgeSite, edgeRadius s ≤ n →
     edgeCompatible tiles s (f s.1) (f (edgeNeighbor s))
 

@@ -4,7 +4,7 @@ defaultTargets = ["K230Core"]
 
 [[lean_lib]]
 name = "K230Core"
-roots = ["RowSimulation", "FiniteWindow", "MachineRun", "WangCompactness", "BoardChannels", "FreeOffsets", "PhaseHierarchy", "NestedBoards"]
+roots = ["Adjacency", "ArcCertificates", "ArcDomains", "BaseFacts", "BoardChannels", "ConcreteRoles", "Distinctness", "ExactSet", "ExactTable", "ExactTarget", "FiniteWindow", "FreeOffsets", "FullPlaneCount", "FullPlaneData", "FullPlaneProjection", "GlobalRecognition", "MachineData", "MachineRun", "NestedBoards", "PatchSemantics", "PhaseHierarchy", "Recognizability", "RowSimulation", "SortProof", "TMCoreBridge", "WangCompactness"]
 
 [[require]]
 name = "mathlib"

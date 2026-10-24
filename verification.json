@@ -1,79 +1,169 @@
 {
-  "scope": "Component verification only. Full-plane equivalence and Palomar submission remain open.",
+  "scope": "Component verification only. Full-plane equivalence, full Lean consistency interpretation, and Palomar submission remain open.",
   "lean": "v4.35.0-rc2",
   "mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
-  "modules": {
-    "RowSimulation": {
-      "sha256": "82aaccfbd45b6a9e2e621d5f26dcff52270862185426d923e0d231d9ae0d3e24",
-      "checks": {
-        "RowSimulation_elaborate": 0,
-        "RowSimulation_export": 0,
-        "RowSimulation_lean_kernel": 0,
-        "RowSimulation_nanoda": 0
+  "source_sha256": {
+    "Adjacency.lean": "6260a649c42f77f7be79b5411a874c4cb242ace21d24792acf0c22bcbaf67880",
+    "ArcCertificates.lean": "46f22b60616793e07386426469128bee1fb093b00e0ba590e106fc236450ce2b",
+    "ArcDomains.lean": "c1e6b7da16cc68466925bd666c50c045e363ef27e724c16e33c8ae58d2a3f1e8",
+    "BaseFacts.lean": "9a65708a96761deaaefdae016b6b772c768b0f67defcecb37d0e9dde904bdbe7",
+    "BoardChannels.lean": "b37d9e655934d1e613b03d8ef5c3f30ee7b6e918d32c04b40e93034e0da0db91",
+    "ConcreteRoles.lean": "6d3602ea0475e895383ac4ce144c4f69e534f015f0d1fa926ca89949f70ea797",
+    "Distinctness.lean": "304a7cfd9c2d0d22d515207940be109b538770e9697981c5f15857461a1f0488",
+    "ExactSet.lean": "c540e25ada46c58952436647915ed3e36d89df28bf2895e953e87f5ef1078ad8",
+    "ExactTable.lean": "451e45c2b0aa3712d5e3729d33fc626c0789960b817f365432f4e29c5f0209e7",
+    "ExactTarget.lean": "592c6ea09ccbc168aa4fb0386ce13e6d0a9dad5453225f6849e06e46e5e42bb5",
+    "FiniteWindow.lean": "430cc6a5a36148524e605bb91b531a48bbbb262558d5859cc023dae3b8e281fb",
+    "FreeOffsets.lean": "befd9e1b700c10c71bfd79875779ec592a8ebd2d11ea39366e594cc34514fede",
+    "FullPlaneCount.lean": "432f705fbfcebee842a96180636971f638fa1fd5828181677d32cbc821c2cae8",
+    "FullPlaneData.lean": "211eb70ec37d5d2fd3656f16e5dec88eb9a68e7738fbd36c67628c2de07ae646",
+    "GlobalRecognition.lean": "31b90b3106d440d30ed0ab8aa55a36690dd0f7a3204e9639b63e9f2d3cb2793f",
+    "MachineData.lean": "83617ff458d01098eb5230543fdfea59ac353216aea161f83a76ecd2ddd93bc1",
+    "MachineRun.lean": "078a275aae5956ad8b30e9317103687b5e5c8c4795090d191b2507c92637f241",
+    "NestedBoards.lean": "29794d188f9bc72518423032b28153aa1c0917fc5546ab9cd54004ea32e9788c",
+    "PatchSemantics.lean": "1ddde7ea3c11a287426ba3fe9439517351fbb4f37cefebf4ab200292835f32c0",
+    "PhaseHierarchy.lean": "87b3a8fea102c8813bd2bc0132c08ff0ada2e9a9f71947d59b97533a7d001771",
+    "Recognizability.lean": "8bc1a3520149559444d6ce642875566efa192c0d35308c2d0ccf8cd3a1a8982c",
+    "RowSimulation.lean": "82aaccfbd45b6a9e2e621d5f26dcff52270862185426d923e0d231d9ae0d3e24",
+    "SortProof.lean": "74b3d6cf228c2e0eb56fe73a7e5f5d686babd30d81a7e339c53be42062f0ed3e",
+    "TMCoreBridge.lean": "a9136ef4ede1a8e425f0db50e811bc6ea6de78c62d09e32a810d2633eb3f8a6e",
+    "WangCompactness.lean": "25c48799d4cc0f1d5554d3565e58b2ca80b54ac007ac04c0cc590d0f32b57143",
+    "FullPlaneProjection.lean": "0959989c43e9faeec8bb2dbe9f0cab39b06dcc0ca74efd24eec2b83777ca6a5a"
+  },
+  "checks": {
+    "generic_core": {
+      "RowSimulation_elaborate": 0,
+      "RowSimulation_export": 0,
+      "RowSimulation_lean_kernel": 0,
+      "RowSimulation_nanoda": 0,
+      "FiniteWindow_elaborate": 0,
+      "FiniteWindow_export": 0,
+      "FiniteWindow_lean_kernel": 0,
+      "FiniteWindow_nanoda": 0
+    },
+    "updated_machine_run": {
+      "MachineRun_elaborate": 0,
+      "MachineRun_export": 0,
+      "MachineRun_lean_kernel": 0,
+      "MachineRun_nanoda": 0,
+      "source_sha256": {
+        "MachineRun": "078a275aae5956ad8b30e9317103687b5e5c8c4795090d191b2507c92637f241"
       }
     },
-    "FiniteWindow": {
-      "sha256": "430cc6a5a36148524e605bb91b531a48bbbb262558d5859cc023dae3b8e281fb",
-      "checks": {
-        "FiniteWindow_elaborate": 0,
-        "FiniteWindow_export": 0,
-        "FiniteWindow_lean_kernel": 0,
-        "FiniteWindow_nanoda": 0
+    "compactness": {
+      "WangCompactness_elaborate": 0,
+      "WangCompactness_export": 0,
+      "WangCompactness_lean_kernel": 0,
+      "WangCompactness_nanoda": 0,
+      "source_sha256": {
+        "WangCompactness": "25c48799d4cc0f1d5554d3565e58b2ca80b54ac007ac04c0cc590d0f32b57143"
       }
     },
-    "MachineRun": {
-      "sha256": "9dcfc50e741bfb0b178a693d98ab7b9a81d0cce08310e50deb5ca99ec1365ead",
-      "checks": {
-        "MachineRun_elaborate": 0,
-        "MachineRun_export": 0,
-        "MachineRun_lean_kernel": 0,
-        "MachineRun_nanoda": 0
+    "exact_list_count": {
+      "FullPlaneCount_elaborate": 0,
+      "FullPlaneCount_export": 0,
+      "FullPlaneCount_lean_kernel": 0,
+      "FullPlaneCount_nanoda": 0,
+      "source_sha256": {
+        "FullPlaneCount": "432f705fbfcebee842a96180636971f638fa1fd5828181677d32cbc821c2cae8"
       }
     },
-    "WangCompactness": {
-      "sha256": "3bd8e3743b1b76a33519db2bd50acc7a375dfbaed3f7cd7c202b838a1342154a",
-      "checks": {
-        "WangCompactness_elaborate": 0,
-        "WangCompactness_export": 0,
-        "WangCompactness_lean_kernel": 0,
-        "WangCompactness_nanoda": 0
+    "exact_set_cardinality": {
+      "ExactSet_elaborate": 0,
+      "ExactSet_export": 0,
+      "ExactSet_lean_kernel": 0,
+      "ExactSet_nanoda": 0,
+      "source_sha256": {
+        "ExactSet": "c540e25ada46c58952436647915ed3e36d89df28bf2895e953e87f5ef1078ad8"
       }
     },
-    "BoardChannels": {
-      "sha256": "b37d9e655934d1e613b03d8ef5c3f30ee7b6e918d32c04b40e93034e0da0db91",
-      "checks": {
-        "BoardChannels_elaborate": 0,
-        "BoardChannels_export": 0,
-        "BoardChannels_lean_kernel": 0,
-        "BoardChannels_nanoda": 0
+    "recognizability": {
+      "source_sha256": {
+        "ExactTable.lean": "451e45c2b0aa3712d5e3729d33fc626c0789960b817f365432f4e29c5f0209e7",
+        "PatchSemantics.lean": "1ddde7ea3c11a287426ba3fe9439517351fbb4f37cefebf4ab200292835f32c0",
+        "ArcDomains.lean": "c1e6b7da16cc68466925bd666c50c045e363ef27e724c16e33c8ae58d2a3f1e8",
+        "ArcCertificates.lean": "46f22b60616793e07386426469128bee1fb093b00e0ba590e106fc236450ce2b",
+        "Adjacency.lean": "6260a649c42f77f7be79b5411a874c4cb242ace21d24792acf0c22bcbaf67880",
+        "Recognizability.lean": "8bc1a3520149559444d6ce642875566efa192c0d35308c2d0ccf8cd3a1a8982c"
+      },
+      "source_bytes": 32246,
+      "results": {
+        "ExactTable_clean_build": 0,
+        "PatchSemantics_clean_build": 0,
+        "ArcDomains_clean_build": 0,
+        "ArcCertificates_clean_build": 0,
+        "Adjacency_clean_build": 0,
+        "Recognizability_clean_build": 0,
+        "export": 0,
+        "leanchecker": 0,
+        "strict_nanoda": 0
+      },
+      "export_sha256": "0e70bf799e08d97ea207bc831a7f229c5c1f39755cc26914bc5d63aca6775445"
+    },
+    "base_facts": {
+      "source_sha256": "9a65708a96761deaaefdae016b6b772c768b0f67defcecb37d0e9dde904bdbe7",
+      "results": {
+        "clean_build": 0,
+        "export": 0,
+        "leanchecker": 0,
+        "strict_nanoda": 0
+      },
+      "export_sha256": "47609900c37576b427c8765672764deb8b55829bd271f31500cb3f62a2dc9c49"
+    },
+    "global_recognition": {
+      "source_sha256": "31b90b3106d440d30ed0ab8aa55a36690dd0f7a3204e9639b63e9f2d3cb2793f",
+      "results": {
+        "lean": 0,
+        "export": 0,
+        "leanchecker": 0,
+        "strict_nanoda": 0
+      },
+      "export_sha256": "1ec98e46a639cf537f68f5f33b0db6b864170f8ba5cbba5ab3ff65b0fe3d245e"
+    },
+    "board_and_tm_binding": {
+      "BoardChannels_elaborate": 0,
+      "BoardChannels_export": 0,
+      "BoardChannels_lean_kernel": 0,
+      "BoardChannels_nanoda": 0,
+      "FreeOffsets_elaborate": 0,
+      "FreeOffsets_export": 0,
+      "FreeOffsets_lean_kernel": 0,
+      "FreeOffsets_nanoda": 0,
+      "ConcreteRoles_elaborate": 0,
+      "ConcreteRoles_export": 0,
+      "ConcreteRoles_lean_kernel": 0,
+      "ConcreteRoles_nanoda": 0,
+      "TMCoreBridge_elaborate": 0,
+      "TMCoreBridge_export": 0,
+      "TMCoreBridge_lean_kernel": 0,
+      "TMCoreBridge_nanoda": 0,
+      "source_sha256": {
+        "BoardChannels": "b37d9e655934d1e613b03d8ef5c3f30ee7b6e918d32c04b40e93034e0da0db91",
+        "FreeOffsets": "befd9e1b700c10c71bfd79875779ec592a8ebd2d11ea39366e594cc34514fede",
+        "ConcreteRoles": "6d3602ea0475e895383ac4ce144c4f69e534f015f0d1fa926ca89949f70ea797",
+        "TMCoreBridge": "a9136ef4ede1a8e425f0db50e811bc6ea6de78c62d09e32a810d2633eb3f8a6e"
       }
     },
-    "FreeOffsets": {
-      "sha256": "befd9e1b700c10c71bfd79875779ec592a8ebd2d11ea39366e594cc34514fede",
-      "checks": {
-        "FreeOffsets_elaborate": 0,
-        "FreeOffsets_export": 0,
-        "FreeOffsets_lean_kernel": 0,
-        "FreeOffsets_nanoda": 0
+    "exact_target": {
+      "ExactTarget_elaborate": 0,
+      "ExactTarget_export": 0,
+      "ExactTarget_lean_kernel": 0,
+      "ExactTarget_nanoda": 0,
+      "source_sha256": {
+        "ExactTarget": "592c6ea09ccbc168aa4fb0386ce13e6d0a9dad5453225f6849e06e46e5e42bb5"
       }
     },
-    "PhaseHierarchy": {
-      "sha256": "87b3a8fea102c8813bd2bc0132c08ff0ada2e9a9f71947d59b97533a7d001771",
-      "checks": {
-        "PhaseHierarchy_elaborate": 0,
-        "PhaseHierarchy_export": 0,
-        "PhaseHierarchy_leanchecker": 0,
-        "PhaseHierarchy_nanoda": 0
-      }
-    },
-    "NestedBoards": {
-      "sha256": "29794d188f9bc72518423032b28153aa1c0917fc5546ab9cd54004ea32e9788c",
-      "checks": {
-        "NestedBoards_elaborate": 0,
-        "NestedBoards_export": 0,
-        "NestedBoards_leanchecker": 0,
-        "NestedBoards_nanoda": 0
-      }
+    "full_plane_projection": {
+      "source_sha256": "0959989c43e9faeec8bb2dbe9f0cab39b06dcc0ca74efd24eec2b83777ca6a5a",
+      "results": {
+        "lean": 0,
+        "export": 0,
+        "leanchecker": 0,
+        "strict_nanoda": 0
+      },
+      "export_sha256": "8e2c30359603143d26823b8ec7b92c895f9990a24f2236e12d356cfdc3ec78a3"
     }
-  }
+  },
+  "build_note": "A concurrent full build hit the memory limit in Adjacency; serial topological build is supplied to bound peak memory. This was a resource failure, not a proved claim.",
+  "serial_lake_build": "Passed: 944 jobs for the component library, then 935 jobs for the added projection target."
 }
