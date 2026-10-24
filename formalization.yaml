@@ -1,19 +1,15 @@
 version: v0.4
 project:
-  name: "K230: 11,487 unseeded Wang tiles and machine nonhalting"
+  name: "Gödel’s floor: 11,487 Wang tiles that tile the plane if and only if ZFC is consistent"
   description: >-
-    This development formalizes the full-plane computation equivalence for one
-    explicit set of 11,487 distinct Wang tiles. With translations only and no
-    seed, boundary condition, or distinguished origin, the tiles cover the
-    integer plane if and only if the specified 230-state, two-symbol K230 machine
-    never halts from state 0 on the blank two-way tape. The same theorem checks
-    the literal tile-list length and nonduplication. The proof establishes exact
-    hierarchical recognition and initialized finite computation boards in one
-    direction, and constructs arbitrarily large decorated boards recursively
-    from finite machine runs before applying compactness in the other. Glazer's
-    separate Rocq theorem connecting K230 nonhalting to ZFC consistency is cited
-    as external context, not imported as a Lean axiom or claimed as part of this
-    checked theorem. No novelty or independent human-review claim is made.
+    We construct a set of 11,487 Wang tiles that can cover the entire plane if
+    and only if the Turing machine K230 runs forever. An earlier result by
+    Glazer, proved in Rocq, shows that K230 runs forever if and only if ZFC is
+    consistent. Combining these results, our tiles cover the plane exactly when
+    ZFC is consistent. Assuming ZFC is consistent and sound, ZFC can neither
+    prove nor refute that such a tiling exists, provided the equivalence itself
+    is provable in ZFC. We formalize the equivalence
+    between tiling and K230’s nonhalting in Lean.
   authors:
     - jconorgrogan
   responsible_maintainers:
