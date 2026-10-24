@@ -1,0 +1,79 @@
+{
+  "scope": "Component verification only. Full-plane equivalence and Palomar submission remain open.",
+  "lean": "v4.35.0-rc2",
+  "mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "modules": {
+    "RowSimulation": {
+      "sha256": "82aaccfbd45b6a9e2e621d5f26dcff52270862185426d923e0d231d9ae0d3e24",
+      "checks": {
+        "RowSimulation_elaborate": 0,
+        "RowSimulation_export": 0,
+        "RowSimulation_lean_kernel": 0,
+        "RowSimulation_nanoda": 0
+      }
+    },
+    "FiniteWindow": {
+      "sha256": "430cc6a5a36148524e605bb91b531a48bbbb262558d5859cc023dae3b8e281fb",
+      "checks": {
+        "FiniteWindow_elaborate": 0,
+        "FiniteWindow_export": 0,
+        "FiniteWindow_lean_kernel": 0,
+        "FiniteWindow_nanoda": 0
+      }
+    },
+    "MachineRun": {
+      "sha256": "9dcfc50e741bfb0b178a693d98ab7b9a81d0cce08310e50deb5ca99ec1365ead",
+      "checks": {
+        "MachineRun_elaborate": 0,
+        "MachineRun_export": 0,
+        "MachineRun_lean_kernel": 0,
+        "MachineRun_nanoda": 0
+      }
+    },
+    "WangCompactness": {
+      "sha256": "3bd8e3743b1b76a33519db2bd50acc7a375dfbaed3f7cd7c202b838a1342154a",
+      "checks": {
+        "WangCompactness_elaborate": 0,
+        "WangCompactness_export": 0,
+        "WangCompactness_lean_kernel": 0,
+        "WangCompactness_nanoda": 0
+      }
+    },
+    "BoardChannels": {
+      "sha256": "b37d9e655934d1e613b03d8ef5c3f30ee7b6e918d32c04b40e93034e0da0db91",
+      "checks": {
+        "BoardChannels_elaborate": 0,
+        "BoardChannels_export": 0,
+        "BoardChannels_lean_kernel": 0,
+        "BoardChannels_nanoda": 0
+      }
+    },
+    "FreeOffsets": {
+      "sha256": "befd9e1b700c10c71bfd79875779ec592a8ebd2d11ea39366e594cc34514fede",
+      "checks": {
+        "FreeOffsets_elaborate": 0,
+        "FreeOffsets_export": 0,
+        "FreeOffsets_lean_kernel": 0,
+        "FreeOffsets_nanoda": 0
+      }
+    },
+    "PhaseHierarchy": {
+      "sha256": "87b3a8fea102c8813bd2bc0132c08ff0ada2e9a9f71947d59b97533a7d001771",
+      "checks": {
+        "PhaseHierarchy_elaborate": 0,
+        "PhaseHierarchy_export": 0,
+        "PhaseHierarchy_leanchecker": 0,
+        "PhaseHierarchy_nanoda": 0
+      }
+    },
+    "NestedBoards": {
+      "sha256": "29794d188f9bc72518423032b28153aa1c0917fc5546ab9cd54004ea32e9788c",
+      "checks": {
+        "NestedBoards_elaborate": 0,
+        "NestedBoards_export": 0,
+        "NestedBoards_leanchecker": 0,
+        "NestedBoards_nanoda": 0
+      }
+    }
+  }
+}
