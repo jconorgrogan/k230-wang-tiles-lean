@@ -5,3 +5,4 @@
 *.ir.sig
 *.ndjson
 *.log
+.verification/

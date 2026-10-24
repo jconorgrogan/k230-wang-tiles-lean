@@ -1,0 +1,90 @@
+version: v0.4
+project:
+  name: "K230: 11,487 unseeded Wang tiles and machine nonhalting"
+  description: >-
+    This development formalizes the full-plane computation equivalence for one
+    explicit set of 11,487 distinct Wang tiles. With translations only and no
+    seed, boundary condition, or distinguished origin, the tiles cover the
+    integer plane if and only if the specified 230-state, two-symbol K230 machine
+    never halts from state 0 on the blank two-way tape. The same theorem checks
+    the literal tile-list length and nonduplication. The proof establishes exact
+    hierarchical recognition and initialized finite computation boards in one
+    direction, and constructs arbitrarily large decorated boards recursively
+    from finite machine runs before applying compactness in the other. Glazer's
+    separate Rocq theorem connecting K230 nonhalting to ZFC consistency is cited
+    as external context, not imported as a Lean axiom or claimed as part of this
+    checked theorem. No novelty or independent human-review claim is made.
+  authors:
+    - jconorgrogan
+  responsible_maintainers:
+    - jconorgrogan
+  license: Apache-2.0
+classification:
+  arxiv: [math.LO, math.CO]
+  msc2020: []
+sources:
+  - title: "K230 full-plane Wang construction and explicit 11,487-tile list"
+    type: other
+    id: "sha256:3d6e292865f7e9d30f33be2ac7e0fc869fa11f38509a5fb5a0e64884038e2979"
+    relationship: formalizes
+    note: >-
+      User-supplied k230-fullplane.zip construction archive; the identifier is
+      the SHA-256 of its k230_fullplane_tiles.tsv. Public archive publication was
+      not yet verified when this metadata was prepared, so no public source
+      URL is asserted. The Lean code was
+      newly written; this proof repository does not include or relicense the
+      supplied archive. The accepted alphabet is the same set after explicit color
+      encoding; list enumeration order may differ. The formal proof uses finite
+      canonical substitution crops and compactness rather than assuming that a
+      particular global Python constructor works at singular limit coordinates.
+  - title: "Glazer's K230 Rocq formalization"
+    type: other
+    id: https://github.com/elliotglazer/k230-rocq/tree/a8312f0ca703bc81baac16695a437a7d3788f690
+    relationship: background
+    author_endorsement: not-contacted
+    note: >-
+      External source for K230's mathematical interpretation. The exact 460
+      transitions were independently recovered from the supplied tile data and
+      compared with the pinned official machine serialization. Neither k230.tm
+      nor custom source files from that repository are copied into this project.
+      The Rocq consistency theorem is not a Lean dependency or admitted premise.
+related_formalizations:
+  - id: https://github.com/elliotglazer/k230-rocq
+    relationship: other
+    note: >-
+      Separate Rocq formalization of K230's connection to ZFC inconsistency.
+      This project proves the tiling-to-machine equivalence in Lean, not a port
+      of that Rocq proof. The absence of a blanket licence for custom sources is
+      respected; citations do not constitute a licence grant or cross-prover proof.
+automation:
+  methods:
+    - method: autonomous
+      tool_setup: >-
+        OpenAI AI assistant with parallel formal-proof construction and separate
+        statement/data audit roles; Lean 4.35.0-rc2, exact finite kernel
+        certificates, proof export, Lean kernel replay and strict NanoDa replay.
+  notes: >-
+    AI systems produced the substantive new Lean proof/code and audit work under
+    the responsible human maintainer's direction. No manual human verification
+    of every proof step is claimed. Finite source-data comparisons are kept
+    distinct from universally quantified Lean theorems.
+review:
+  status: agent-reviewed
+  reviewers:
+    - "OpenAI AI assistant: separate endpoint, source-data and contract audit"
+  notes: >-
+    The endpoint audit checks exact machine semantics, all-plane quantifiers,
+    initialization, child-level decrease, full-color seams, noncircularity, and
+    finite-window neighbor margins. All 124 frozen custom modules rebuilt from source; final proof export,
+    independent Lean kernel replay and strict NanoDa replay all exited 0, with
+    unchanged source hashes. The final standalone Challenge was separately
+    audited against the exact Solution declarations and target type. Local
+    Comparator was blocked before checking by its mandatory bubblewrap sandbox;
+    no sandbox was disabled. Official pinned mechanical preflight remains a
+    separate pending gate, not a completed registry submission. No human peer
+    review or Palomar review, acceptance or registration is claimed.
+limitations:
+  - "The complete concrete compiler equivalence is instantiated for K230, not every partial Turing machine."
+  - "ZFC syntax, consistency and incompleteness are not formalized in this Lean statement."
+  - "The external Rocq result is cited, not assumed as a Lean axiom or cross-checked by a Lean proof."
+  - "Novelty has not been established by a literature-priority audit."

@@ -1,0 +1,777 @@
+{
+  "endpoint": "K230Verification.exact_plane_implies_neverHalts",
+  "statement": "ExactPlane -> K230NeverHalts",
+  "source_order": [
+    {
+      "module": "RowSimulation",
+      "source": "RowSimulation.lean",
+      "sha256": "82aaccfbd45b6a9e2e621d5f26dcff52270862185426d923e0d231d9ae0d3e24",
+      "imports": [],
+      "external_imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "MachineData",
+      "source": "MachineData.lean",
+      "sha256": "83617ff458d01098eb5230543fdfea59ac353216aea161f83a76ecd2ddd93bc1",
+      "imports": [
+        "RowSimulation"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ExactTable",
+      "source": "ExactTable.lean",
+      "sha256": "451e45c2b0aa3712d5e3729d33fc626c0789960b817f365432f4e29c5f0209e7",
+      "imports": [],
+      "external_imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "FullPlaneData",
+      "source": "FullPlaneData.lean",
+      "sha256": "211eb70ec37d5d2fd3656f16e5dec88eb9a68e7738fbd36c67628c2de07ae646",
+      "imports": [
+        "MachineData",
+        "ExactTable"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "FullPlaneCount",
+      "source": "FullPlaneCount.lean",
+      "sha256": "432f705fbfcebee842a96180636971f638fa1fd5828181677d32cbc821c2cae8",
+      "imports": [
+        "FullPlaneData"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "MachineRun",
+      "source": "MachineRun.lean",
+      "sha256": "078a275aae5956ad8b30e9317103687b5e5c8c4795090d191b2507c92637f241",
+      "imports": [
+        "RowSimulation"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "WangCompactness",
+      "source": "WangCompactness.lean",
+      "sha256": "25c48799d4cc0f1d5554d3565e58b2ca80b54ac007ac04c0cc590d0f32b57143",
+      "imports": [],
+      "external_imports": [
+        "Mathlib.Topology.Compactness.Compact",
+        "Mathlib.Topology.Instances.Discrete"
+      ]
+    },
+    {
+      "module": "ExactTarget",
+      "source": "ExactTarget.lean",
+      "sha256": "592c6ea09ccbc168aa4fb0386ce13e6d0a9dad5453225f6849e06e46e5e42bb5",
+      "imports": [
+        "FullPlaneCount",
+        "MachineRun",
+        "WangCompactness"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "PatchSemantics",
+      "source": "PatchSemantics.lean",
+      "sha256": "1ddde7ea3c11a287426ba3fe9439517351fbb4f37cefebf4ab200292835f32c0",
+      "imports": [
+        "ExactTable"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ArcDomains",
+      "source": "ArcDomains.lean",
+      "sha256": "c1e6b7da16cc68466925bd666c50c045e363ef27e724c16e33c8ae58d2a3f1e8",
+      "imports": [
+        "PatchSemantics"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ArcCertificates",
+      "source": "ArcCertificates.lean",
+      "sha256": "46f22b60616793e07386426469128bee1fb093b00e0ba590e106fc236450ce2b",
+      "imports": [
+        "ArcDomains"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "Adjacency",
+      "source": "Adjacency.lean",
+      "sha256": "6260a649c42f77f7be79b5411a874c4cb242ace21d24792acf0c22bcbaf67880",
+      "imports": [
+        "ExactTable"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "Recognizability",
+      "source": "Recognizability.lean",
+      "sha256": "8bc1a3520149559444d6ce642875566efa192c0d35308c2d0ccf8cd3a1a8982c",
+      "imports": [
+        "ArcCertificates",
+        "Adjacency"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "BaseFacts",
+      "source": "BaseFacts.lean",
+      "sha256": "9a65708a96761deaaefdae016b6b772c768b0f67defcecb37d0e9dde904bdbe7",
+      "imports": [
+        "ExactTable"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "PhaseHierarchy",
+      "source": "PhaseHierarchy.lean",
+      "sha256": "87b3a8fea102c8813bd2bc0132c08ff0ada2e9a9f71947d59b97533a7d001771",
+      "imports": [],
+      "external_imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "GlobalRecognition",
+      "source": "GlobalRecognition.lean",
+      "sha256": "31b90b3106d440d30ed0ab8aa55a36690dd0f7a3204e9639b63e9f2d3cb2793f",
+      "imports": [
+        "Recognizability",
+        "BaseFacts",
+        "PhaseHierarchy"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "FullPlaneProjection",
+      "source": "FullPlaneProjection.lean",
+      "sha256": "0959989c43e9faeec8bb2dbe9f0cab39b06dcc0ca74efd24eec2b83777ca6a5a",
+      "imports": [
+        "ExactTarget",
+        "GlobalRecognition"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ConcreteExpansion",
+      "source": "ConcreteExpansion.lean",
+      "sha256": "6491dedf93d8786aeada21afc619db49df101f5fd1d3fb25ff378eeb25348ae0",
+      "imports": [
+        "ExactTable",
+        "PhaseHierarchy"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ConcreteWitness",
+      "source": "ConcreteWitness.lean",
+      "sha256": "d9e2d03c85fefc9b238c1c56f636ab2db084f84a848fc67c12d0a83c109c999f",
+      "imports": [
+        "ConcreteExpansion"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ConcreteCoreTable",
+      "source": "ConcreteCoreTable.lean",
+      "sha256": "8bf448546fb160d8fc1905ce3caed8067a75fca8bbfcc956e44a4eaf3cb117c7",
+      "imports": [
+        "ConcreteExpansion"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ConcreteBoards",
+      "source": "ConcreteBoards.lean",
+      "sha256": "ddc608f8177715fd19767d12c2bf257fa53c34344f3b0288f5c182d5f442a652",
+      "imports": [
+        "ConcreteWitness",
+        "ConcreteCoreTable",
+        "GlobalRecognition"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "FullBoardOccurrences",
+      "source": "FullBoardOccurrences.lean",
+      "sha256": "fde8d8db842d141733104b700640b34bc59ca0918b4cdc58ff4d793bbd5f1238",
+      "imports": [
+        "FullPlaneProjection",
+        "ConcreteBoards"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ChannelClasses",
+      "source": "ChannelClasses.lean",
+      "sha256": "7619ebb56c0bb4ff22708b16aa67ee6291ba2a8ad720eba5b3e6f0699eb8efb6",
+      "imports": [
+        "FullPlaneData"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ModuloFourCertificate",
+      "source": "ModuloFourCertificate.lean",
+      "sha256": "7682ef6fd9caf2b2521cb82e551df1b79f2a32c471b6eb25f0efd72c00a51399",
+      "imports": [
+        "ConcreteWitness",
+        "ChannelClasses"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ModuloFourLocality",
+      "source": "ModuloFourLocality.lean",
+      "sha256": "e944bb2d0e8afaf3199126ae17be5399968698a76eb14081738bd11bed7f512a",
+      "imports": [
+        "ModuloFourCertificate"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "BoardLocality",
+      "source": "BoardLocality.lean",
+      "sha256": "83ef85a3f388951ca7d0200b6639a1f162b6121df4d3f9e991975acdfbc23dc5",
+      "imports": [
+        "ModuloFourLocality",
+        "ConcreteBoards"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "FullBoardBridge",
+      "source": "FullBoardBridge.lean",
+      "sha256": "60be82524499c03e9009c1a05f126b9f0e63bb7daeb91dc643e0a24a5e633a7d",
+      "imports": [
+        "FullBoardOccurrences",
+        "BoardLocality"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "BoardChannels",
+      "source": "BoardChannels.lean",
+      "sha256": "b37d9e655934d1e613b03d8ef5c3f30ee7b6e918d32c04b40e93034e0da0db91",
+      "imports": [],
+      "external_imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "FullBoardIndexing",
+      "source": "FullBoardIndexing.lean",
+      "sha256": "131df6c938d9c9dce3b9dc98d9e91f4886b3004cdc6eb2350312d3c66fff7e1b",
+      "imports": [
+        "FullBoardBridge",
+        "BoardChannels"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "FreeOffsets",
+      "source": "FreeOffsets.lean",
+      "sha256": "befd9e1b700c10c71bfd79875779ec592a8ebd2d11ea39366e594cc34514fede",
+      "imports": [
+        "BoardChannels"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ConcreteRoles",
+      "source": "ConcreteRoles.lean",
+      "sha256": "6d3602ea0475e895383ac4ce144c4f69e534f015f0d1fa926ca89949f70ea797",
+      "imports": [
+        "FullPlaneData",
+        "BoardChannels",
+        "FreeOffsets"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ChannelTrace",
+      "source": "ChannelTrace.lean",
+      "sha256": "f8e47ac6dc3d36c158d73f4efb86acb03a80436711884db92eb3f80d664ffa35",
+      "imports": [
+        "BoardChannels"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ActualChannels",
+      "source": "ActualChannels.lean",
+      "sha256": "56ddad32e2877d45af99827d2c8ca31e29225854f211674bb8b1d72b9bfc1f4c",
+      "imports": [
+        "FullBoardIndexing",
+        "ConcreteRoles",
+        "ChannelTrace"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "CenteredFullBoard",
+      "source": "CenteredFullBoard.lean",
+      "sha256": "3e5c06d5082e387182f8c93e0efcb3b948da4db66e90fbfd8d3ae59cb475d5d4",
+      "imports": [
+        "FullBoardIndexing"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ActualBoardData",
+      "source": "ActualBoardData.lean",
+      "sha256": "91a452e813626d89f6d7e40b423078695716ca2608b173c9092252bbc13b185a",
+      "imports": [
+        "ActualChannels",
+        "CenteredFullBoard"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RawExpansion",
+      "source": "RawExpansion.lean",
+      "sha256": "304d99cf3707d8d4196046ba610c1bf5941225aeeae5a4fd5bcae63fea9007a8",
+      "imports": [
+        "ConcreteExpansion"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RedStatusData",
+      "source": "RedStatusData.lean",
+      "sha256": "9d9ae3dd5064e9762c3be2b27c09aedb1a21cc9476ec7dfe248bfc4a4fd25bf0",
+      "imports": [
+        "RawExpansion",
+        "ConcreteBoards",
+        "ConcreteRoles"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RedStatusCertificate",
+      "source": "RedStatusCertificate.lean",
+      "sha256": "db01e034691f8feda77e98655c4347fccf9c4347f34c0d6671edd85ffe291284",
+      "imports": [
+        "RedStatusData"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RedStatus",
+      "source": "RedStatus.lean",
+      "sha256": "1bad6962ab42837183bbcca1c50a3c89997fd8339393bbb30235ca69151dcbf0",
+      "imports": [
+        "RedStatusCertificate"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RedBoardGeometry",
+      "source": "RedBoardGeometry.lean",
+      "sha256": "27c9a07e018e9ce46838ecc418d0feb2e310e3463b25fc26007c92af2971e0f4",
+      "imports": [
+        "BoardChannels"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RingAlgebra",
+      "source": "RingAlgebra.lean",
+      "sha256": "ed30bef1d529df088e38dfdbac7711aa8f4758d3dddac9cfcde0c736bbd11eae",
+      "imports": [
+        "RedStatusData",
+        "RedBoardGeometry"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RingClassification",
+      "source": "RingClassification.lean",
+      "sha256": "d8cb77c1c664d1f0f0adee55e292b2c85b67174866bee6e56544aa4114f48983",
+      "imports": [
+        "RedStatus",
+        "RingAlgebra"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RingInduction",
+      "source": "RingInduction.lean",
+      "sha256": "fa086a28942c86baaf74ad932132ece0d7189dc2d4c58c93bb3817ed4abb5147",
+      "imports": [
+        "RingClassification"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RingExposure",
+      "source": "RingExposure.lean",
+      "sha256": "80491c88ab98671e92b62c87ff9cca916cdd9f6d32b39b1cb527a8b327e60392",
+      "imports": [
+        "RingInduction"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ActualChannelMasks",
+      "source": "ActualChannelMasks.lean",
+      "sha256": "7ac52c784cc1aec9ce9db210e8744155633869dbad705dad6b5e8087e49b07d8",
+      "imports": [
+        "ActualChannels"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ActualSegmentTrace",
+      "source": "ActualSegmentTrace.lean",
+      "sha256": "b38eab44b38cbaee7cc5a02f0d741272620f90baa4ca6f52436e7caad95cb145",
+      "imports": [
+        "ActualChannelMasks",
+        "CenteredFullBoard"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "CenteredChannels",
+      "source": "CenteredChannels.lean",
+      "sha256": "cf59f0f0544f8129547c33d0346511b069a23ff8bedf70a8ef7de0227d709e8c",
+      "imports": [
+        "ActualChannels",
+        "CenteredFullBoard"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ExposedActualChannels",
+      "source": "ExposedActualChannels.lean",
+      "sha256": "02b55b69cdd622f4bd8941c838ebdd9f44a10761efa59d60be1524b28aba7aa4",
+      "imports": [
+        "RingExposure",
+        "ActualSegmentTrace",
+        "CenteredChannels"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "FiniteWindow",
+      "source": "FiniteWindow.lean",
+      "sha256": "430cc6a5a36148524e605bb91b531a48bbbb262558d5859cc023dae3b8e281fb",
+      "imports": [],
+      "external_imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "FiniteBoard",
+      "source": "FiniteBoard.lean",
+      "sha256": "550725e35908c794f61d0dd97491728399380802a628dd5ebc5d4728bb467db0",
+      "imports": [
+        "MachineRun",
+        "FiniteWindow"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "TapeGrid",
+      "source": "TapeGrid.lean",
+      "sha256": "a68258d4cffa5e7c2ace70f65c7114b36f4a7759e913963a827c80f865a29d07",
+      "imports": [
+        "FreeOffsets"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "TMCoreBridge",
+      "source": "TMCoreBridge.lean",
+      "sha256": "a9136ef4ede1a8e425f0db50e811bc6ea6de78c62d09e32a810d2633eb3f8a6e",
+      "imports": [
+        "FullPlaneData"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ConcreteRoleExtensions",
+      "source": "ConcreteRoleExtensions.lean",
+      "sha256": "d134efe117ad5e717ee20778a0308abf93744a5781bfd64eb24a329b5190d350",
+      "imports": [
+        "ConcreteRoles",
+        "TMCoreBridge"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "GridWires",
+      "source": "GridWires.lean",
+      "sha256": "48d0615384e03f5d5a10cf4d6f00e04668814ce74eed0b67cdb808c0509fffdc",
+      "imports": [
+        "FiniteBoard",
+        "TapeGrid",
+        "ConcreteRoleExtensions"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RoutedBoard",
+      "source": "RoutedBoard.lean",
+      "sha256": "79b12b595aabe7cf2db850a362254186068a51b38cde8f6ed10e5ecde37cca41",
+      "imports": [
+        "GridWires"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "GridGaps",
+      "source": "GridGaps.lean",
+      "sha256": "e1458a4784db445efe96be18af559699e8a0f66065b55cddc90f3639adc5915b",
+      "imports": [
+        "RoutedBoard"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ConcreteRoutingMasks",
+      "source": "ConcreteRoutingMasks.lean",
+      "sha256": "783dbb2e5152a79fa4cdd2824016a7dcb795b6f72824d1a1aba0b3c2073edf81",
+      "imports": [
+        "ConcreteRoleExtensions"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ChannelRouting",
+      "source": "ChannelRouting.lean",
+      "sha256": "49427660f09d1bf8221a94584e27c6abeaf541b06ef9b6307c373e5b091517e2",
+      "imports": [
+        "ActualBoardData",
+        "ExposedActualChannels",
+        "GridGaps",
+        "ConcreteRoutingMasks"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "SideCertificates",
+      "source": "SideCertificates.lean",
+      "sha256": "29a1d13f07d112a3d4d47b2769f4b7329922d3dede4ae5c2e9c0a032f109643a",
+      "imports": [
+        "RawExpansion",
+        "ChannelClasses"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "FiveState",
+      "source": "FiveState.lean",
+      "sha256": "77cd7affc6d56c41f0e058cd4b4618ce3e848ddadadb43483701e1834a34395d",
+      "imports": [
+        "SideCertificates"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "CoreCoordinates",
+      "source": "CoreCoordinates.lean",
+      "sha256": "4e705eb93c97ef8488126c517677377ac4c9cd9ec3a1bc2fc8247f30eb521ca0",
+      "imports": [
+        "ConcreteBoards",
+        "SideCertificates"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "SideGeometry",
+      "source": "SideGeometry.lean",
+      "sha256": "619a6d7b688a937bd5ac53fdeb3fc8169844cc72753664c8e7302e34b5b07694",
+      "imports": [
+        "FiveState",
+        "ConcreteBoards",
+        "BoardLocality",
+        "CoreCoordinates"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RootChannelGeometry",
+      "source": "RootChannelGeometry.lean",
+      "sha256": "22c0bb024aa3850be7a159fef96e33054018af206a8f0b95ffb66084c0e747e5",
+      "imports": [
+        "SideGeometry",
+        "CenteredFullBoard"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "CenterRowGeometry",
+      "source": "CenterRowGeometry.lean",
+      "sha256": "869692cc01cbf14967de649af328cebf84d7f5f2525da17399ebbd925fea876e",
+      "imports": [
+        "FiveState",
+        "ConcreteBoards",
+        "CoreCoordinates"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "InitialRow",
+      "source": "InitialRow.lean",
+      "sha256": "51e8bdd4583efa1f762557e3f8f37900247c188b968b29d589d031dd1ba5a9b8",
+      "imports": [
+        "GridWires",
+        "ChannelClasses"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ActualBoardGeometry",
+      "source": "ActualBoardGeometry.lean",
+      "sha256": "99168ba9a342f3bc382c594aad754125b2c1844f0e7be7e84fb866afec3ecfc2",
+      "imports": [
+        "ActualBoardData",
+        "RootChannelGeometry",
+        "CenterRowGeometry",
+        "InitialRow",
+        "ConcreteRoutingMasks"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ActualRoutedAssembly",
+      "source": "ActualRoutedAssembly.lean",
+      "sha256": "436d8173445c9c86d1329d7322eaf118234ce0ff8783dd0bc2785847ec645b38",
+      "imports": [
+        "ChannelRouting",
+        "ActualBoardGeometry"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RingBoundary",
+      "source": "RingBoundary.lean",
+      "sha256": "ff0af9c0d2c5a34426abcc05a764be6982c66440b48352d24060bb2484699e31",
+      "imports": [
+        "RingInduction",
+        "ChannelClasses"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "RingSides",
+      "source": "RingSides.lean",
+      "sha256": "d2fbbd1c9d16dffcf8691800e9e9c11849e11d42f657bfc25c818b4313642f73",
+      "imports": [
+        "RingBoundary"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "CropSides",
+      "source": "CropSides.lean",
+      "sha256": "ad647f2eb5c5e1d1b24d5d11ebc9e685c7cc9fe912982f8109b090e4ba3d23ab",
+      "imports": [
+        "RingSides"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "BoardEntrances",
+      "source": "BoardEntrances.lean",
+      "sha256": "ccc7d5a7d2b5124fb713e9ea40737bfe1915fc82b0cdcbe74afc2996d43c289f",
+      "imports": [
+        "RedBoardGeometry"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "SubboardCrops",
+      "source": "SubboardCrops.lean",
+      "sha256": "2d8475eadb4607314527415d45d78789548709967f9b65dcee909b3e262ed867",
+      "imports": [
+        "ConcreteBoards"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "GeometricSubboards",
+      "source": "GeometricSubboards.lean",
+      "sha256": "f8fc302c5a9c356647c7dbf704bc24a04e07f120b5a38a787328c4f6c583df02",
+      "imports": [
+        "SubboardCrops",
+        "RedBoardGeometry"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "EntryIndices",
+      "source": "EntryIndices.lean",
+      "sha256": "d5ca1fb8e5c8835b5e4fcd22e4aa6adfdb23e6295c217a449f6618c3bdef2a1f",
+      "imports": [
+        "CropSides",
+        "BoardEntrances",
+        "GeometricSubboards",
+        "BoardLocality"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "FreeActualChannels",
+      "source": "FreeActualChannels.lean",
+      "sha256": "c507c3483ce204007fdcec9f4322ecc5ae582318a8af6dd7f73c6e9d78ffdf97",
+      "imports": [
+        "RootChannelGeometry",
+        "ExposedActualChannels"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ActualBoardTraces",
+      "source": "ActualBoardTraces.lean",
+      "sha256": "3aab01765b0a444c37dda3910f2122d94793606e997c5ac296a534c7e8678181",
+      "imports": [
+        "EntryIndices",
+        "FreeActualChannels",
+        "ChannelRouting"
+      ],
+      "external_imports": []
+    },
+    {
+      "module": "ExactForward",
+      "source": "ExactForward.lean",
+      "sha256": "299dfe92849ca2b5e13ffc054287066b1739bcb40ab60691d5445272519cce6c",
+      "imports": [
+        "ActualRoutedAssembly",
+        "ActualBoardTraces"
+      ],
+      "external_imports": []
+    }
+  ],
+  "replay": {
+    "ExactForward_elaborate": 0,
+    "ExactForward_export": 0,
+    "ExactForward_lean_kernel": 0,
+    "ExactForward_nanoda": 0,
+    "source_sha256": {
+      "GridGaps": "e1458a4784db445efe96be18af559699e8a0f66065b55cddc90f3639adc5915b",
+      "ConcreteRoutingMasks": "783dbb2e5152a79fa4cdd2824016a7dcb795b6f72824d1a1aba0b3c2073edf81",
+      "ActualBoardData": "91a452e813626d89f6d7e40b423078695716ca2608b173c9092252bbc13b185a",
+      "ActualBoardGeometry": "99168ba9a342f3bc382c594aad754125b2c1844f0e7be7e84fb866afec3ecfc2",
+      "ChannelRouting": "49427660f09d1bf8221a94584e27c6abeaf541b06ef9b6307c373e5b091517e2",
+      "ActualRoutedAssembly": "436d8173445c9c86d1329d7322eaf118234ce0ff8783dd0bc2785847ec645b38",
+      "ExactForward": "299dfe92849ca2b5e13ffc054287066b1739bcb40ab60691d5445272519cce6c"
+    }
+  },
+  "export_sha256": "8c58bf8b7452fe6d283ae8ead23b36557786f2f1b32145a4f5562f289bb27c5b",
+  "stable_export_identical": true,
+  "note": "Only transitive custom module imports. No diagnostics or unrelated reverse-construction modules. External Std/Mathlib imports use the established toolchain path.",
+  "receipt_scope_note": "Historical forward-only receipt. Current full-equivalence status is recorded separately in verification.json."
+}

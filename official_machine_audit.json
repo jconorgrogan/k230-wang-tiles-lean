@@ -1,0 +1,11 @@
+{
+  "official_blob_sha": "d14350a79000920ea0bd1eead8d04ef22ad82f1c",
+  "official_machine_sha256": "e7ccbcec074534cfd955f0ab94d16f13594e81974074309dc2ce663b9dfd7ba8",
+  "exact_460_codes_equal": true,
+  "source_url": "https://github.com/elliotglazer/k230-rocq/blob/a8312f0ca703bc81baac16695a437a7d3788f690/machine/k230.tm",
+  "commit": "a8312f0ca703bc81baac16695a437a7d3788f690",
+  "pinned_blob_matches": true,
+  "start_state": 0,
+  "index_order_verified": true,
+  "halting_state_has_no_entry": true
+}

@@ -1,0 +1,10 @@
+{
+  "challenge_source_sha256": "8954e56b8a4e4e380091eba381af69ffb2bd725243128c0a12076e54c55f0bfa",
+  "challenge_export_sha256": "17afc810621a961f0f2195528dfeed992b007f14341437c05082d9b6ac584c90",
+  "solution_export_sha256": "9917573a9814454e0e213fe5cf64bbd87508cf5ada0648b522744b52020d630f",
+  "status": "blocked_before_kernel_check",
+  "exit_code": 1,
+  "reason": "bwrap: loopback: Failed to create NETLINK_ROUTE socket: Operation not permitted",
+  "sandbox_disabled": false,
+  "next_gate": "Official pinned GitHub Actions predictive mechanical preflight"
+}

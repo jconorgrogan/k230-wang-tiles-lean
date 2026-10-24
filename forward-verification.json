@@ -1,0 +1,25 @@
+{
+  "ExactForward_elaborate": 0,
+  "ExactForward_export": 0,
+  "ExactForward_lean_kernel": 0,
+  "ExactForward_nanoda": 0,
+  "source_sha256": {
+    "GridGaps": "e1458a4784db445efe96be18af559699e8a0f66065b55cddc90f3639adc5915b",
+    "ConcreteRoutingMasks": "783dbb2e5152a79fa4cdd2824016a7dcb795b6f72824d1a1aba0b3c2073edf81",
+    "ActualBoardData": "91a452e813626d89f6d7e40b423078695716ca2608b173c9092252bbc13b185a",
+    "ActualBoardGeometry": "99168ba9a342f3bc382c594aad754125b2c1844f0e7be7e84fb866afec3ecfc2",
+    "ChannelRouting": "49427660f09d1bf8221a94584e27c6abeaf541b06ef9b6307c373e5b091517e2",
+    "ActualRoutedAssembly": "436d8173445c9c86d1329d7322eaf118234ce0ff8783dd0bc2785847ec645b38",
+    "ExactForward": "299dfe92849ca2b5e13ffc054287066b1739bcb40ab60691d5445272519cce6c"
+  },
+  "theorem": "K230Verification.exact_plane_implies_neverHalts",
+  "statement": "ExactPlane -> K230NeverHalts",
+  "proof_export_sha256": "8c58bf8b7452fe6d283ae8ead23b36557786f2f1b32145a4f5562f289bb27c5b",
+  "allowed_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "closure": "Forward implication only; this historical forward-only receipt does not certify the converse or a Lean consistency interpretation.",
+  "receipt_scope_note": "Historical forward-only receipt. Current full-equivalence status is recorded separately in verification.json."
+}

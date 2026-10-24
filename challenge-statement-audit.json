@@ -1,0 +1,197 @@
+{
+  "status": "pass",
+  "scope": "Exact-file declaration/data/type audit; local Comparator blocked by required sandbox, official preflight pending.",
+  "challenge_file": "Challenge.lean",
+  "challenge_sha256": "8954e56b8a4e4e380091eba381af69ffb2bd725243128c0a12076e54c55f0bfa",
+  "solution_file": "Solution.lean",
+  "solution_sha256": "882deeed747fa732e68aa9ca6926dd401871e5f6af74b7d86034ea04e25d8426",
+  "identical_copied_declarations": 42,
+  "declarations": {
+    "Tile": {
+      "source_module": "ExactTable",
+      "normalized_declaration_sha256": "b487cbc74493fce0da23f8e59b10d65f0e349fce06a73183aad252f51416b0c5"
+    },
+    "exact156table": {
+      "source_module": "ExactTable",
+      "normalized_declaration_sha256": "e8998da1b5479cb2229cffbc97b6c0e5cf710b0d84002f05ab48f9ea94010eec"
+    },
+    "tile": {
+      "source_module": "ExactTable",
+      "normalized_declaration_sha256": "efe7ded23c523d9a0473f7ee521de24afa7a47903b4ab83f4e8fe52e79148a7a"
+    },
+    "Dir": {
+      "source_module": "RowSimulation",
+      "normalized_declaration_sha256": "3e70c12a056173e676564a2c015dd73d3b30bd2a2010f906a42d083361814920"
+    },
+    "Machine": {
+      "source_module": "RowSimulation",
+      "normalized_declaration_sha256": "e8be1978a3bc1562fdeeb988e7bbb3203a9a369b6c03679c14923588ca5eb067"
+    },
+    "k230Codes": {
+      "source_module": "MachineData",
+      "normalized_declaration_sha256": "db8d4af8402a5c0eff8313101dbd3e513fb593f481b0e2fdcfa0e0018eb225b2"
+    },
+    "decodeTransition": {
+      "source_module": "MachineData",
+      "normalized_declaration_sha256": "733d13c462a4790c2528525a7993965e094277f6ed30c081ac9b89651159766d"
+    },
+    "k230Machine": {
+      "source_module": "MachineData",
+      "normalized_declaration_sha256": "0ea3a35544eca2ebc7739e755382d2dea083403b0221deb1b0b290470f935cc6"
+    },
+    "TMColor": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "65a56699dbfdc02933b3a343f31c8805a1a97b49adb2e3903d9849f1cb1d6c9c"
+    },
+    "Quad": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "ca1a47d793fc24c79246b12ec2d6069f81558287d5a0c8460b67bbf7ed7a0417"
+    },
+    "tmBlank": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "f710f4820db30a7105e5a559a7aea74332d7eadf7b2501805fdf066dddfac3a1"
+    },
+    "tmVertical": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "1159d7bfac83940a7d0c4ecba1236e8d7a248cfc31c86e63be35c7e4a4838d22"
+    },
+    "tmMoves": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "ebd029cc30d94e28ac40d1237b38a05b082d26ef49ac6bfc8dac40221d1d2e7e"
+    },
+    "tmColumns": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "00d86cbd9d6c8cc805d5f1a9d75f6e3270d036dcc63deecb7ff925e7cfde498e"
+    },
+    "tmActions": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "c18dffa5061ee0d76affce59eeaad454bf0da36cfb8c3f9f43418ef97acb1a82"
+    },
+    "tmMerges": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "7cb5653279be164c97318ea5115fe6c92d68f51c80fe7720ef4d29616651d228"
+    },
+    "tmComp": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "d612e2a29bc5d18f0f1ae3ff2bc7faeb5ef75fd1bb98e4a5b635907124618d09"
+    },
+    "tmFamily": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "738556ffcd762821cfde1b4d20185f6696d9c8618c617c2d92da51bfc000e355"
+    },
+    "exactGroups": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "f01d331bb6216e6ae36743b7fad52a50ba3e3efb051e2e8ce2b2116f125a7381"
+    },
+    "FullColor": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "6464859be1974c4be6750ff4eb4695914604e72411e9b771c9cf8b076040e828"
+    },
+    "decorate": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "968c075f15522d6a89403bd8e55fdd956fc66533920b34aa9129dc13fcc55d1c"
+    },
+    "exactFullPlaneTiles": {
+      "source_module": "FullPlaneData",
+      "normalized_declaration_sha256": "b143b8a7134db346c51fd3e1f22531f1e88ec89ed9554791bd2c471e75160d4d"
+    },
+    "Configuration": {
+      "source_module": "MachineRun",
+      "normalized_declaration_sha256": "49ba2995f28187876abe605bf3044dd5a963d0ddcef00f816fe10fc2ba5da7f7"
+    },
+    "Configuration.after": {
+      "source_module": "MachineRun",
+      "normalized_declaration_sha256": "c401deb681136dfb7dc15c87c161ba5c790824ccc2fd060c76e5e4f3c890292d"
+    },
+    "machineStep": {
+      "source_module": "MachineRun",
+      "normalized_declaration_sha256": "c578f432e636419005d3f882c5d5937fa6582a4bac394ae158cd229de9ea3871"
+    },
+    "machineRun": {
+      "source_module": "MachineRun",
+      "normalized_declaration_sha256": "3479e30cf85e053fb971257b49fa087e1651c718be2a0da8ca8ca1d46a2ab1b1"
+    },
+    "NeverHalts": {
+      "source_module": "MachineRun",
+      "normalized_declaration_sha256": "0337f9a7c8c1a8a8fd1f6e3744f23a94976e3152f15bf235df8795a13a28d0b1"
+    },
+    "WangTile": {
+      "source_module": "WangCompactness",
+      "normalized_declaration_sha256": "e79bcce44203681c43b68dd4b9f777f3dcc272747db52a0a59eb710d454b2bd5"
+    },
+    "Cell": {
+      "source_module": "WangCompactness",
+      "normalized_declaration_sha256": "fc7094d34f101567e5aff5d02a2dfe28a58404d3497d6b27ed26e750afe33770"
+    },
+    "EdgeSite": {
+      "source_module": "WangCompactness",
+      "normalized_declaration_sha256": "a85f6a929fbfafbb07d8d62aa44a518d9f5e8bf41df12d9b0ad735fdadfb0d6e"
+    },
+    "edgeNeighbor": {
+      "source_module": "WangCompactness",
+      "normalized_declaration_sha256": "7a69336b41cbf1eed6b5bd3cd23544b460453be797eaf41d7ab4606c79238731"
+    },
+    "edgeCompatible": {
+      "source_module": "WangCompactness",
+      "normalized_declaration_sha256": "91f4d9c8620532149de61c13afb27520ebc8420e7a6a0376d1dfe097ac1dd4d0"
+    },
+    "edgeRadius": {
+      "source_module": "WangCompactness",
+      "normalized_declaration_sha256": "61ce0545544f33bf28ce1ec0c26a5f2903a49364d8aad74dc9828ce23ddd5f36"
+    },
+    "TilesPlane": {
+      "source_module": "WangCompactness",
+      "normalized_declaration_sha256": "96ed67e57f14f65c90b8c3c6e1f6a87200d941e44d58b8c8c38ad31375f5f8dd"
+    },
+    "TilesEveryWindow": {
+      "source_module": "WangCompactness",
+      "normalized_declaration_sha256": "491112fad38fb04165959dc8ea58c0bc24f563e48472beaea703351299f6a2d7"
+    },
+    "exact_fullplane_count": {
+      "source_module": "FullPlaneCount",
+      "normalized_declaration_sha256": "cf0def8a1a01b3f710ebf65d17d23564d2c7f084ff845e27c075528ea3a08408"
+    },
+    "indexedFullTile": {
+      "source_module": "ExactTarget",
+      "normalized_declaration_sha256": "26d0d32d2002680078fc748cb635013d628949b230f5dda8f92b2df22bddcca5"
+    },
+    "indexedWangTile": {
+      "source_module": "ExactTarget",
+      "normalized_declaration_sha256": "5c0c72baf7c803bfe0501a262c14da32828d37d5af65579c888f2d942377a50b"
+    },
+    "ExactPlane": {
+      "source_module": "ExactTarget",
+      "normalized_declaration_sha256": "cf8002e8aeb31f084b17e7902ae040e688090af8c3d2c6dca343405a093cf038"
+    },
+    "ExactWindows": {
+      "source_module": "ExactTarget",
+      "normalized_declaration_sha256": "58fd76530342e7c0ae6e2ee788d070d47ef5d73fc92201b906c4afc3c140ec37"
+    },
+    "k230Initial": {
+      "source_module": "ExactTarget",
+      "normalized_declaration_sha256": "ac18f5cc9e704297a3cf2fbf69798a98ea112297a5390f1cf5a6af78aaca7d33"
+    },
+    "K230NeverHalts": {
+      "source_module": "ExactTarget",
+      "normalized_declaration_sha256": "567e0422673f7b669e6a5e84f70b0585531019680af227a5a84e8f61a46c1d3b"
+    }
+  },
+  "base_rows": 156,
+  "transition_codes": 460,
+  "base_channel_groups": 226,
+  "template_cases": 14,
+  "imports": [
+    "Std",
+    "Mathlib.Topology.Compactness.Compact"
+  ],
+  "final_type_exact_codepoint_match": true,
+  "final_type": "theorem exact_11487_equivalence : exactFullPlaneTiles.length=11487 \u2227 exactFullPlaneTiles.Nodup \u2227 (ExactPlane \u2194 K230NeverHalts)",
+  "statement_holes": 1,
+  "hole_only_in_final_theorem": true,
+  "solution_imports_challenge": false,
+  "suspicious_unicode_codepoints": [],
+  "ordinary_blank_two_way_machine_semantics": true,
+  "unseeded_all_integer_plane_semantics": true,
+  "challenge_export_sha256": "17afc810621a961f0f2195528dfeed992b007f14341437c05082d9b6ac584c90",
+  "draft_change_note": "The final 447-line, 21631-byte Challenge adds explanatory documentation to the shorter draft and places imports before the module documentation. Its 42 declarations and final target type were re-audited against the frozen Solution source; this exact final file was recompiled and re-exported."
+}

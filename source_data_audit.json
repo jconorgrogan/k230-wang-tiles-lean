@@ -1,0 +1,7 @@
+{
+  "scope": "Finite TSV-to-Lean data fidelity only; no infinite tiling conclusion",
+  "status": "pass",
+  "distinct_tiles": 11487,
+  "original_tsv_sha256": "3d6e292865f7e9d30f33be2ac7e0fc869fa11f38509a5fb5a0e64884038e2979",
+  "lean_export_sha256": "d13a54419955a4193a92fa7f3e6dbe42fc9ffcaf435fe061ad660d8cb7b2aedb"
+}
